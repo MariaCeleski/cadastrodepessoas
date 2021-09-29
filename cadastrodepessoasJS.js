@@ -1,6 +1,6 @@
 var pessoas, index;
 
-function cadPessoa(nome, sobrenome, email, sexo, profissao) {
+function cadPessoa(nome, sobrenome, email, sexo, profissao,telefone) {
     pessoas = document.getElementById("tbPessoas");    
     var qtdlLinhas = pessoas.rows.length;
     var linha = pessoas.insertRow(qtdlLinhas);
@@ -12,6 +12,7 @@ function cadPessoa(nome, sobrenome, email, sexo, profissao) {
     var cellEmail = linha.insertCell(3);
     var cellSexo = linha.insertCell(4);
     var cellProfissao = linha.insertCell(5);
+    var cellTelefone = linha.insertCell(6);
 
     cellCodigo.innerHTML = qtdlLinhas;
     cellNome.innerHTML = nome;
@@ -19,18 +20,20 @@ function cadPessoa(nome, sobrenome, email, sexo, profissao) {
     cellEmail.innerHTML = email;
     cellSexo.innerHTML = sexo;
     cellProfissao.innerHTML = profissao;
+    cellTelefone.innerHTML = telefone;
 
     preencheCamposForm();
 
 }
 
-function altPessoa(nome, sobrenome, email, sexo, profissao) {
+function altPessoa(nome, sobrenome, email, sexo, profissao, telefone) {
 
     pessoas.rows[index].cells[1].innerHTML = nome;
     pessoas.rows[index].cells[2].innerHTML = sobrenome;
     pessoas.rows[index].cells[3].innerHTML = email;
     pessoas.rows[index].cells[4].innerHTML = sexo;
     pessoas.rows[index].cells[5].innerHTML = profissao;
+    pessoas.rows[index].cells[6].innerHTML = telefone;
 
 }
 
@@ -47,6 +50,7 @@ function preencheCamposForm() {
             document.getElementById("txtEmail").value = pessoas.rows[index].cells[3].innerText;
             document.getElementById("slSexo").value = pessoas.rows[index].cells[4].innerText;
             document.getElementById("txtProfissao").value = pessoas.rows[index].cells[5].innerText;
+            document.getElementById("txtTelefone").value = pessoas.rows[index].cells[6].innerText;
         }
     }
 }

@@ -1,0 +1,32 @@
+h1{
+    text-align: center;
+    }
+
+#fPessoas {
+    width: 600px;
+    margin-left: 35%;
+    margin-top: 3%;
+}
+
+tr:hover {
+    cursor: pointer;
+}
+
+#tbPessoas {
+    font: 14px Verdana;
+}
+
+#dGridPessoas {
+    width: 960px;
+    margin-left: 25%;   
+}
+
+select {
+    width: 280px;
+    height: 38px;
+}
+
+input[type=button] {
+    width: 180px;
+    height: 48px;
+   }

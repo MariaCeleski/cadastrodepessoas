@@ -17,10 +17,10 @@
 </head>
 
 <body style="background-color: aqua;">
-    <h1>CADASTRO DE PESSOAS</h1>                                                           
+    <h1>CADASTRO DE PESSOAS</h1>
     <nav class="navbar navbar-dark bg-dark">
         <div class="lh-100">
-            <h6 class="mb-0 text-white lh-100">Cadastro de Pessoas</h6>
+            <h6 class="mb-0 text-white lh-100">Cadastro de Alunos</h6>
             <small class="text-white">SENAI</small>
         </div>
     </nav>
@@ -67,12 +67,17 @@
                 <input type="text" class="form-control" id="txtProfissao"
                     placeholder="Profissão">
             </div>
+            <div class="form-group">
+                <label for="phone">Telefone</label>
+                <input type="tel" class="form-control" id="phone"
+                    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Telefone">
+            </div>
             <button type="button" class="btn btn-primary btn-lg"
-                onclick="cadPessoa(txtNome.value, txtSobrenome.value, txtEmail.value, slSexo.value, txtProfissao.value)">
+                onclick="cadPessoa(txtNome.value, txtSobrenome.value, txtEmail.value, slSexo.value, txtProfissao.value, phone.value)">
                 Inserir
             </button>
             <button type="button" class="btn btn-primary btn-lg"
-                onclick="altPessoa(txtNome.value, txtSobrenome.value, txtEmail.value, slSexo.value, txtProfissao.value)">
+                onclick="altPessoa(txtNome.value, txtSobrenome.value, txtEmail.value, slSexo.value, txtProfissao.value, phone.value)">
                 Salvar
             </button>
             <button type="button" class="btn btn-primary btn-lg"
@@ -96,6 +101,7 @@
                     <th scope="col">E-mail</th>
                     <th scope="col">Sexo</th>
                     <th scope="col">Profissão</th>
+                    <th scope="col">Telefone</th>
                 </tr>
             </thead>
         </table>
